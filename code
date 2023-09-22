@@ -1,0 +1,27 @@
+class Train:
+    company="Indian Railways"
+    def __init__(self, name, number, seats, fare):
+        self.name=name
+        self.number=number
+        self.seats=seats
+        self.fare=fare
+    
+    def GetStatus(self):
+        print(f"The name of train is {self.name}.")
+        print(f"Seats available in train are {self.seats}.")
+    
+    def GetTicketInfo(self):
+        print(f"Price of ticket is Rs{self.fare}")
+    
+    def BookTicket(self):
+        if(self.seats>0):
+            print(f"Your Ticket is booked, and your seat number is {self.seats}") 
+            self.seats=self.seats-1
+        else:
+            print("Sorry! This train is full.")
+            
+RajdhaniExp=Train("Rajdhani Express", 12402, 800, "Rs 1500")
+JanShatabdi=Train("Janshatabdi Express", 14402, 900, "Rs 1450")
+VandeBharat=Train("Vandebharat Express", 19901, 500, "Rs 2500")
+MahaKaushal=Train("Mahakaushal Express", 14502, 500, "Rs 1000")
+GaribRath=Train("Garib Rath", 15502, 600, "Rs 1000")
